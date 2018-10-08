@@ -5,12 +5,11 @@ public class View {
 		
 	}
 	
-	static Time time1 = new Time(1600); 
-	static Temp temp1 = new Temp(20);
-	static Wind wind1 = new Wind(11);
-	static int timenow = time1.getTime();
-	static int tempnow = temp1.getTemp();
-	static int windnow = wind1.getWind();
+	static Sensor s = new Sensor();
+	static int timenow = s.getTime();
+	static int tempnow = s.getTemp();
+	static int windnow = s.getWind();
+	
 	
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();
