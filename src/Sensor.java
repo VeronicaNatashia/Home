@@ -14,17 +14,17 @@ public class Sensor {
 
 	public int getTemp() {
 		Random random = new Random();
-		int temp = random.nextInt(50);
+		int temp = random.nextInt(40);
 		return temp;
 	}
 	public int getTime() {
 		Random random = new Random();
-		int time = random.nextInt(50);
+		int time = random.nextInt(23);
 		return time;
 	}
 	public int getWind() {
 		Random random = new Random();
-		int wind = random.nextInt(50);
+		int wind = random.nextInt(30);
 		return wind;
 	}
 }

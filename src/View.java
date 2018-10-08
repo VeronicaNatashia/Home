@@ -10,10 +10,10 @@ public class View {
 	static int tempnow = s.getTemp();
 	static int windnow = s.getWind();
 	
-	
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		JLabel timeLabel = new JLabel("Time: "+timenow);
+		JLabel timeOption = new JLabel();
 		JLabel tempLabel = new JLabel("Temp: "+tempnow+"C");
 		JLabel windLabel = new JLabel("Wind: "+windnow+"km/h");
 		JLabel acLabel = new JLabel("AC: ");
@@ -25,14 +25,21 @@ public class View {
 		}
 		JLabel blindsLabel = new JLabel("Blinds: ");
 		JLabel blindsOption = new JLabel();
-		if(timenow <= 1700) {
+		if(timenow <= 17) {
 			blindsOption.setText("Open");
 		}else {
 			blindsOption.setText("Close");
 		}
+		if(timenow < 12) {
+			timeOption.setText("am");
+		}else {
+			timeOption.setText("pm");
+		}
+		
 		frame.setLayout(null);
 		
 		timeLabel.setBounds(0, 0, 100, 50);
+		timeOption.setBounds(50, 0, 50, 50);
 		tempLabel.setBounds(0, 30, 100, 50);
 		windLabel.setBounds(0, 60, 100, 50);
 		acLabel.setBounds(0, 90, 50, 50);
@@ -41,6 +48,7 @@ public class View {
 		blindsOption.setBounds(140, 90, 100, 50);
 		
 		frame.getContentPane().add(timeLabel);
+		frame.getContentPane().add(timeOption);
 		frame.getContentPane().add(tempLabel);
 		frame.getContentPane().add(windLabel);
 		frame.getContentPane().add(acLabel);
